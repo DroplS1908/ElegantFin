@@ -3735,6 +3735,17 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     padding-top: 9.5em !important;
 }
 
+/* Reduce visual size of library cards: more cards per row + slightly smaller padding */
+/* This targets only library pages so other UI stays unchanged */
+.libraryPage .portraitCard,
+.libraryPage .squareCard {
+    --cardCount: 6; /* increase cards per row to make each card smaller; tweak to 5/7 as needed */
+}
+
+.libraryPage .card {
+    padding: .25em; /* slightly reduce padding for a tighter layout */
+}
+
 /* this limits top page padding when section tabs always on TVs */
 .layout-tv .libraryPage:not(.noSecondaryNavPage) {
     padding-top: 6em !important;
